@@ -3,10 +3,10 @@ exports.seed = function (knex) {
 
   const users = [
     {
-      username: "ben",
+      username: "Noah",
       password: "pwd",
-      role: 1,
-      department: "engineering"
+      role: 3,
+      department: "summer intern"
     },
     // just me to start this time
     // {
