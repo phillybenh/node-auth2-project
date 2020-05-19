@@ -10,7 +10,8 @@ function createToken(user) {
     const payload = {
         sub: user.id,
         username: user.username,
-        role: user.role
+        role: user.role,
+        department: user.department
     };
 
     const secret = configVars.jwtSecret;
