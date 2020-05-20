@@ -17,7 +17,7 @@ router.get("/", (req, res) => {
 
 // stretch - find by the users department
 router.get("/myDept", (req, res) => {
-    console.log(req.jwt.department)
+    // console.log(req.jwt.department)
     Users.findBy({ department: req.jwt.department })
         .then(users => {
             res.status(200).json({ users, jwt: req.jwt });
@@ -27,7 +27,7 @@ router.get("/myDept", (req, res) => {
 
 // not quite the stretch, but could be useful
 router.get("/:department", (req, res) => {
-    console.log(req.params.department)
+    // console.log(req.params.department)
     Users.findBy({ department: req.params.department })
         .then(users => {
             res.status(200).json({ users, jwt: req.jwt });

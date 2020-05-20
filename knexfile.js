@@ -23,11 +23,7 @@ module.exports = {
   // needs username adn password if migrating postgres locally
   production: {
     client: "pg",
-    connection: {
-      database: 'my_db',
-      user: process.env.PG_USERNAME,
-      password: process.env.PG_PWD
-    },
+    connection: pgConnection,
     pool: {
       min: 2,
       max: 10,
